@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QWdgtDebug</class>
+ <widget class="QWidget" name="QWdgtDebug">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>963</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QToolBox" name="toolBox">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="page_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>409</width>
+         <height>397</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Serial Port</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Port:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboPortName"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Baudrate:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboBaudrate"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="btnRefreshPortInfo">
+          <property name="text">
+           <string>refresh</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="btnSerialConnect">
+          <property name="text">
+           <string>connect</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>409</width>
+         <height>397</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Motor / Led</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QComboBox" name="comboMotoType">
+          <item>
+           <property name="text">
+            <string>Chip Motor</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Camera Motor</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Filter Motor</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnMotoRunForward">
+          <property name="text">
+           <string>moto run forward</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnMotoRunBackward">
+          <property name="text">
+           <string>moto run backward</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnMotoStop">
+          <property name="text">
+           <string>moto stop</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnMotoReset">
+          <property name="text">
+           <string>moto reset</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="btnMotoSteps">
+            <property name="text">
+             <string>moto run steps</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="editMotoRunSteps">
+            <property name="minimum">
+             <number>-100</number>
+            </property>
+            <property name="maximum">
+             <number>2000</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="btnSetMotoSpeed">
+            <property name="text">
+             <string>set Speed</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="editMotoSpeed">
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QRadioButton" name="radioLedRed">
+            <property name="text">
+             <string>Red</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QRadioButton" name="radioLedBlue">
+            <property name="text">
+             <string>Blue</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="radioLedWhite">
+            <property name="text">
+             <string>White</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QRadioButton" name="radioLedOff">
+            <property name="text">
+             <string>Off</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>409</width>
+         <height>397</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Camera</string>
+       </attribute>
+       <widget class="QPushButton" name="btnOpenCam">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>89</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnStartCam">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>50</y>
+          <width>89</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lblCamName">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>191</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Camera:</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="cBoxAutoExposure">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Auto Exposure</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnWbOnce">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>131</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>White Balance</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnRefresh">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>50</y>
+          <width>89</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Auto Refresh</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>409</width>
+         <height>397</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Operations</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QPushButton" name="btnUpdateSysStatus">
+          <property name="text">
+           <string>Update Status</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnAutoFocus">
+          <property name="text">
+           <string>Auto Focus</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="progressAutoFocus">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="lblImage">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tblSysStatus">
+         <row>
+          <property name="text">
+           <string>Chip Motor</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Camera Motor</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>FilterMotor</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Led</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Chip Tray</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Status</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>LimitPos</string>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+         </item>
+         <item row="0" column="1">
+          <property name="text">
+           <string>No Limit</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+         </item>
+         <item row="1" column="0">
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+         </item>
+         <item row="1" column="1">
+          <property name="text">
+           <string>No Limit</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+         </item>
+         <item row="2" column="0">
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+         </item>
+         <item row="2" column="1">
+          <property name="text">
+           <string>No Limit</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+         </item>
+         <item row="3" column="0">
+          <property name="text">
+           <string>Led Off</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+         </item>
+         <item row="4" column="0">
+          <property name="text">
+           <string>No Chip</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignCenter</set>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
